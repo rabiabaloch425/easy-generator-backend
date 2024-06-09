@@ -1,6 +1,5 @@
 name: "Deploy to Azure App Service"
 
-
 on:
   push:
     branches:
@@ -8,21 +7,27 @@ on:
 
 jobs:
   build-and-deploy:
-  runs-on: ubuntu-latest
-   steps:
-   - name: Checkout Source
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Source
       uses: actions/checkout@v3
-    - name: Steup Node.js version
+
+    - name: Setup Node.js version
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
 
     - name: Install Dependencies
       run: npm install
+
+    - name: Build Project
+      run: npm run build
+
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'easy-generator-assessment'
         slot-name: 'production'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: .
+        package: '.'
