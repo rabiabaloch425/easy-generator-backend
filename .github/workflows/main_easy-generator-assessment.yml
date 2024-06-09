@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'easy-generator-assessment'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BC03C56774E745C4AAD18BA899B19306 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D47066D186449C5BC87F9672A8DADEB }}
           package: .
