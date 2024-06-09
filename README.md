@@ -9,6 +9,11 @@ This is the backend project for the Easy Generator Assessment. It is built using
 
 ## Getting Started
 
+
+[Swagger Documentation](https://easy-generator-assessment.azurewebsites.net/api#/ '(This is the api documentation for auth flow.)')
+
+[Quick Demo ](https://www.loom.com/share/4d39dba8d2254ef0b7df8ae89fc01720 '(This is the quick overview of for auth flow.)')
+
 ### 1. Clone the Repository
 
 ```bash
@@ -17,9 +22,6 @@ cd easy-generator-backend
 npm install
 npm run server
 
-```bash
 
-### 2. Quick Demo URL
-https://www.loom.com/share/4d39dba8d2254ef0b7df8ae89fc01720
 
 
